@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 Django settings for onlyflans project.
 
@@ -11,38 +10,32 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-=======
->>>>>>> 44ede79e (subiendo hito 2)
+
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-<<<<<<< HEAD
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-qe9%^ul8@+o7!+j_m57#)hlie#hhxcepgu&oz=eooogd-t)xy$'
-=======
+
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'Kashka123*'
->>>>>>> 44ede79e (subiendo hito 2)
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 44ede79e (subiendo hito 2)
 # Application definition
 
 INSTALLED_APPS = [
@@ -52,11 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-=======
+
 # Mis aplicaciones
     'web',    
->>>>>>> 44ede79e (subiendo hito 2)
 ]
 
 MIDDLEWARE = [
@@ -89,14 +80,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'onlyflans.wsgi.application'
 
-<<<<<<< HEAD
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-=======
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
->>>>>>> 44ede79e (subiendo hito 2)
 
 DATABASES = {
     'default': {
@@ -105,14 +93,11 @@ DATABASES = {
     }
 }
 
-<<<<<<< HEAD
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-=======
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
->>>>>>> 44ede79e (subiendo hito 2)
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -128,15 +113,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-<<<<<<< HEAD
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
-=======
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
->>>>>>> 44ede79e (subiendo hito 2)
 
 LANGUAGE_CODE = 'es'
 
@@ -144,7 +124,6 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-<<<<<<< HEAD
 USE_TZ = True
 
 
@@ -155,7 +134,6 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-=======
 USE_L10N = True
 
 USE_TZ = True
@@ -168,6 +146,5 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
->>>>>>> 44ede79e (subiendo hito 2)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
