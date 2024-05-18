@@ -1,53 +1,82 @@
 {% extends 'base.html' %}
 
-{% block title %}Contacto OnlyFlans{% endblock %}
+{% block title %} Contacto OnlyFlans {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="col-12 col-md-6 offset-0 offset-md-3 mt-4 mb-4" style="align-items: center;">
-        <h1>Contáctanos</h1>
-        <div class="col">
-            <form method="post" action="{% url 'contacto' %}" style="align-items: center;">
-                {% csrf_token %}
-                {{ form.non_field_errors }}
-                <div class="mb-3 text-center">
-                    <label for="{{ form.customer_name.id_for_label }}" class="form-label">
-                        {{ form.customer_name.label_tag }}
-                    </label>
-                    <div>
-                        {{ form.customer_name }}
-                    </div>
-                    <div class="text-danger">
-                        {{ form.customer_name.errors }}
-                    </div>
+<div class="container" style="background-color: #eeeff4;">
+    <h1 class="text-center pt-4">¡Contáctate con nosotros!</h1>
+    <form action="{% url 'contacto'%}" method="post">
+        {% csrf_token %}
+        
+        <!-- Campo de Nombre -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="text-center">
+                    <label for="id_customer_name" class="form-label">Nombre</label>
                 </div>
                 <div class="mb-3 text-center">
-                    <label for="{{ form.customer_email.id_for_label }}" class="form-label">
-                        {{ form.customer_email.label_tag }}
-                    </label>
-                    <div>
-                        {{ form.customer_email }}
-                    </div>
-                    <div class="text-danger">
-                        {{ form.customer_email.errors }}
-                    </div>
+                    {{ form.customer_name }}
+                    <!-- Muestra los errores de validación debajo del campo -->
+                    {% for error in form.customer_name.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
                 </div>
-                <div class="mb-3 text-center">
-                    <label for="{{ form.message.id_for_label }}" class="form-label">
-                        {{ form.message.label_tag }}
-                    </label>
-                    <div>
-                        {{ form.message }}
-                    </div>
-                    <div class="text-danger">
-                        {{ form.message.errors }}
-                    </div>
-                </div>
-                <div class="mb-3 text-center">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
+        
+        <!-- Campo de Correo -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="text-center">
+                    <label for="id_customer_email" class="form-label">Correo Electrónico</label>
+                </div>
+                <div class="mb-3 text-center">
+                    {{ form.customer_email }}
+                    <!-- Muestra los errores de validación debajo del campo -->
+                    {% for error in form.customer_email.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Campo de Mensaje -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="text-center">
+                    <label for="id_message" class="form-label">Mensaje</label>
+                </div>
+                <div class="mb-3 text-center">
+                    {{ form.message }}
+                    <!-- Muestra los errores de validación debajo del campo -->
+                    {% for error in form.message.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botón Enviar centrado -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="pb-4 text-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
+
+<style>
+    /* Ajuste del ancho de los campos de entrada */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box; /* Asegura que el ancho incluya el padding */
+        margin-bottom: 10px;
+    }
+</style>
+
 {% endblock %}
