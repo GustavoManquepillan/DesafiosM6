@@ -1,31 +1,30 @@
-<div  class="container " style="background-color: #c47a3fef;  padding-top: 10px; padding-bottom: 10px; ">
-
-  <nav class="navbar navbar-expand-lg navbar-light " style=" background-color: #c47a3fef;">
-    <div class="container-fluid">
-      {% load static%}
-      <div class="logo" >
-        <a class="navbar-brand" src href="#"> <img src="{% static 'img/1939174-200.png'%}" alt="logo" class="img-fluid" style="height: 60px;"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>  
-      
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'indice' %}" ><h5>Inicio</h5></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'bienvenido' %}" ><h5>Bienvenido</h5></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'acerca' %}" ><h5>Acerca</h5></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'contacto' %}" ><h5>Contacto</h5></a>
-          </li>
-        </ul>
+<div class="container" style="background-color: #c47a3f; padding-top: 10px; padding-bottom: 10px;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #c47a3f;">
+      <div class="container-fluid">
+          {% load static %}
+          <a class="navbar-brand" href="#">
+              <img src="{% static 'img/1939174-200.png' %}" alt="logo" class="img-fluid" style="height: 60px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Alineamos el contenido a la derecha con ms-auto -->
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'indice' %}"><h4>Inicio</h4></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'bienvenido' %}"><h4>Bienvenido</h4></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'acerca' %}"><h4>Acerca</h4></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{% url 'contacto' %}"><h4>Contacto</h4></a>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </div>
   </nav>
 </div>

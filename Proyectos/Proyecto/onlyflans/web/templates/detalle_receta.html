@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %} Recetas de OnlyFlans {% endblock title %}
+
+{% block content %}
+<div class="container pt-3 pb-4" style="background-color: #eeeff4;">
+    <h1 class="text-center mb-4">Recetas de OnlyFlans</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mb-3 ">
+                <img src="{{ flan.image_url }}" class="card-img-top flan-img mt-2" alt="{{ flan.name }}">
+                <div class="card-body">
+                    <h2 class="card-title text-center">{{ flan.name }}</h2>
+                    
+                    <p class="card-title text-center">{{ flan.description }} </p>
+                    <hr>
+                    <h4 class="card-title text-center">{{ flan.ingredients }} </h4>
+                    <p class="card-title text-center">{{ flan.ingredients_description }} </p>
+                    <hr>
+                    <h4 class="card-title text-center">{{ flan.preparation }} </h4>
+                    <p class="card-title text-center">{{ flan.preparation_description }} </p>
+                    
+                    <div class="text-center">
+                        {% if flan.is_private %}
+                            <a href="{% url 'bienvenido' %}" class="btn btn-primary">Volver</a>
+                        {% else %}
+                            <a href="{% url 'indice' %}" class="btn btn-primary">Volver</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .flan-img {
+         /* Ajusta esta altura según tus necesidades */
+        object-fit: cover; /* Esta propiedad asegura que la imagen se recorte para llenar el contenedor */
+        border-radius: 15px; /* Ajusta este valor para redondear los bordes según tus necesidades */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .card {
+        border-radius: 15px;
+    }
+</style>
+{% endblock content %}
